@@ -20,8 +20,8 @@ namespace SqlSaveFromFile
                     foreach (var line in SplitToLines(fileContent))
                     {
                         var word = line.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);
-                        var insertString = $@"INSERT INTO DB1.dbo.Person VALUES({word[0]}, '{word[1]}', '{word[2]}', {word[3]});";
-                        var cmd = new SqlCommand(insertString, conn);
+                        var insertString = $@"INSERT INTO DB1.dbo.Person VALUES({word[0]}, '{word[1]}', '{word[2]}', {word[3]});"; //jak zrobić w SQL zeby ID sie samo inkrementowalo ? 
+                        var cmd = new SqlCommand(insertString, conn); //o co chodzi z DB1.dbo.Person ? 
                         conn.Open();
                         cmd.ExecuteNonQuery();
                         conn.Close();
@@ -30,7 +30,7 @@ namespace SqlSaveFromFile
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception Occre while creating table:" + e.Message + "\t" + e.GetType());
+               //co tutaj wpisywac ?
             }
         }
 
