@@ -13,7 +13,7 @@ namespace SqlSaveFromFile
 
         static void Main(string[] args)
         {
-            var iFileToSql = new FileToSql(); //jak to jest z deklarowaniem zmiennych o takich samych nazwach jak interfejs ?
+            var iFileToSql = new FileToSql();
 
             iFileToSql.SaveToSql(FileUrl, Database);
 
